@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+header.navbar-container {
+  width: 100%;
+  padding-block: 1rem;
+  margin-inline: auto;
+  background: #272829;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+}
+
+header.navbar-container .logo img {
+  width: 50px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #e8f6ef;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #61677a;
+  color: #272829;
+  font-weight: bold;
+}
+
+h2,
+h3 {
+  color: #0d0f10;
+}
+
+.parallax-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-bg {
+  background-image: url("../image/header-bg.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 500px;
+  max-height: 700px;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  padding: 25px 70px;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 35px;
+}
+
+.card section {
+  text-align: center;
+  width: 200px;
+}
+
+.lagu {
+  width: 200px;
+  border-radius: 13px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.judul-kategori {
+  text-align: center;
+  font-size: 35px;
+}
+
+.kategori {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 5px 70px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.kategori h2 {
+  font-size: 35px;
+}
+
+.kategori section {
+  text-align: center;
+}
+
+.kategori img.member {
+  width: 300px;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.Jumbtron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #edf6f0;
+  text-align: center;
+  color: rgb(43, 86, 49);
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+.logo-nct {
+  width: 200px;
+}
+
+.card table {
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #272829;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  header.navbar-container .nav-list ul {
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header.navbar-container .nav-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  header.navbar-container .nav-list li a {
+    padding: 0.5rem 1rem;
+  }
+
+  main {
+    flex-flow: column nowrap;
+  }
+
+  .featured-image {
+    min-width: 100%;
+  }
+
+  main aside {
+    align-self: center;
+  }
+
+  .kategori {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header.navbar-container .nav-list li {
+    margin-bottom: 5px;
+  }
+
+  header.navbar-container .nav-list li a {
+    padding: 0.1rem 1rem;
+  }
+
+  .featured-image {
+    max-width: 100%;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+
+  .kategori {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
